@@ -15,7 +15,7 @@ I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇ Fᴏʀ Yᴏᴜ Jᴜsᴛ Aᴅᴅ Mᴇ Iɴ
 ✯ Mʏ Vᴇʀꜱɪᴏɴ: ᴩʀᴏꜰᴇꜱꜱᴏʀ-ʙᴏᴛ ᴠ4.5.0</b>"""
    
     SOURCE_TXT = """<b>NOTE:</b>
-- ᴄᴏᴅᴇ ʜᴇʀᴇ ◉› :<a href=https://github.com/>Devil</a>
+ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ʜᴇʀᴇ ◉› :<a href=https://t.me/devilservers>Devil-Movie</a>
 
 <b>ᴅᴇᴠ: <a herf=https://t.me/devilservers>ᴍʀ.ᴅᴇᴠɪʟ ᴛɢ</a></b>"""
 
