@@ -7,7 +7,7 @@ services:
     startCommand: python bot.py
     repo: https://github.com/Darkksoul/AutoFilterbot.git
     branch: main
-    autoDeploy: false
+    autoDeploy: True
     envVars:
       - key: BOT_TOKEN
         sync: True
@@ -66,5 +66,7 @@ services:
          - key: BUTTON_LOCK
         sync: True
          - key: P_TTI_SHOW_OFF
+        sync: True
+        - key: ADMINS
         sync: True
              
