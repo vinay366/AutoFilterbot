@@ -83,7 +83,7 @@
 
 ## Deploy to Railway
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/github.com/Darkksoul/AutoFilterbot)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/https://github.com/Darkksoul/AutoFilterbot)
 
 
 
