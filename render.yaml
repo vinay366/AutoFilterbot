@@ -25,7 +25,7 @@ services:
         sync: True
       - key: PICS
         sync: True
-      - key: ADMINS
+      - key: ADMIN
         sync: True
       - key: WEBHOOK
         sync: True
