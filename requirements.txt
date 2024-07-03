@@ -1,5 +1,4 @@
 #--Main----#
-git+https://github.com/MKN-BOTZ/pyrogram 
 pyrogram==2.0.106
 tgcrypto==1.2.5
 aiofiles==22.1.0     
