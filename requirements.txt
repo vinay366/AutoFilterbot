@@ -4,11 +4,11 @@ tgcrypto
 aiofiles    
 aiohttp
 requests
-bs4==0.0.1
+bs4
 
 #---database---#
 pymongo
-dnspython==2.3.0
+dnspython
 marshmallow
 umongo
 motor
@@ -16,19 +16,19 @@ motor
 #---ytdl----#
 youtube-search-python
 youtube-search
-yt-dlp==2023.2.17
+yt-dlp
 
 #---imdb---#
 cinemagoer
 
 #---others----#
-opencv-python-headless==4.7.0.68
-googletrans==3.1.0a0
+opencv-python-headless
+googletrans
 telegraph
-python-dotenv==0.21.1
-gTTS==2.3.1
-Pillow==10.2.0
-psutil==5.9.4
+python-dotenv
+gTTS
+Pillow
+psutil
 NumPy
 wheel
 ujson
