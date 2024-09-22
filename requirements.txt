@@ -1,28 +1,28 @@
-#--Main----#
-pyrofork==2.4.0  # Use the latest stable version
+# --Main---- #
+pyrofork  # Use latest available version (remove version to install the latest)
 tgcrypto==1.2.1
 aiofiles==23.1.0
 aiohttp==3.8.5
 requests==2.31.0
 beautifulsoup4==4.12.2
 
-#---database---#
+# ---database--- #
 pymongo==4.3.3
 dnspython==2.3.0
 marshmallow==3.19.0
 umongo==3.1.0
 motor==3.3.0
 
-#---ytdl----#
+# ---ytdl---- #
 youtube-search-python==1.2.1
 youtube-search==1.0.0
 yt-dlp==0.38.0
 
-#---imdb---#
+# ---imdb--- #
 cinemagoer==8.2.0
 imdbpy==2023.9.23  # Ensure this is the latest stable version
 
-#---others----#
+# ---others---- #
 opencv-python-headless==4.6.0.66
 googletrans==4.0.0-rc1
 telegraph==0.1
