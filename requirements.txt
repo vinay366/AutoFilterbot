@@ -1,5 +1,5 @@
 #--Main----#
-pyrofork==0.1.0
+pyrofork==2.4.0  # Use the latest stable version
 tgcrypto==1.2.1
 aiofiles==23.1.0
 aiohttp==3.8.5
@@ -20,7 +20,7 @@ yt-dlp==0.38.0
 
 #---imdb---#
 cinemagoer==8.2.0
-imdbpy==2023.9.23  # Add this line with the latest version
+imdbpy==2023.9.23  # Ensure this is the latest stable version
 
 #---others----#
 opencv-python-headless==4.6.0.66
