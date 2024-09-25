@@ -19,7 +19,7 @@ youtube-search
 yt-dlp
 
 # ---imdb--- #
-cinemagoer
+cinemagoer==2023.5.1
 
 # ---others---- #
 opencv-python-headless
@@ -29,7 +29,7 @@ python-dotenv
 gTTS
 Pillow
 psutil
-numpy
+NumPy
 wheel
 ujson
 wget
