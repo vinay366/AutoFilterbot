@@ -11,9 +11,9 @@ from info import API_ID, API_HASH, BOT_TOKEN, LOG_CHANNEL, UPTIME, WEB_SUPPORT, 
 
 # Get logging configurations
 logging.config.fileConfig("logging.conf")
-logging.getLogger(__name__).setLevel(logging.INFO)
+logging.getLogger().setLevel(logging.INFO)
 logging.getLogger("cinemagoer").setLevel(logging.ERROR)
-
+logger = logging.getLogger(__name__)
 
 class Bot(Client):
     def __init__(self):
