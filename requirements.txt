@@ -4,7 +4,7 @@ tgcrypto
 aiofiles
 aiohttp
 requests
-beautifulsoup4
+bs4
 
 # ---database--- #
 pymongo
