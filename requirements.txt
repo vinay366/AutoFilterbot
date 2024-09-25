@@ -20,7 +20,6 @@ yt-dlp
 
 # ---imdb--- #
 cinemagoer
-imdbpy
 
 # ---others---- #
 opencv-python-headless
