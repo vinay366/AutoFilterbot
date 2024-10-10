@@ -39,8 +39,8 @@
             "required": false
         },
         "PICS": {
-            "description": "Add some telegraph link of pictures .",
-            "required": false
+            "description": "https://te.legra.ph/file/94bc067909902a02eaf20.jpg",
+            "required": true
         },
         "LOG_CHANNEL": {
             "description": "Bot Logs,Give a channel id with -100xxxxxxx",
@@ -120,9 +120,9 @@
             "required": false
         },
         "WELCOM_PIC": {
-            "description": "Welcome message pic (telegraph link)",
+            "description": "https://te.legra.ph/file/94bc067909902a02eaf20.jpg",
             "value": "",
-            "required": false
+            "required": true
         },
         "WELCOM_TEXT": {
             "description": "your group welcome text keyword({user} = joined use & {chat} = your chat name",
