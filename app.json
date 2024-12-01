@@ -39,7 +39,7 @@
             "required": false
         },
         "PICS": {
-            "description": "https://telegra.ph/file/216c233c62bfeb241b359.jpg https://telegra.ph/file/f7a0e18e59b404d69ee3d.jpg https://telegra.ph/file/1a2b6e76af675065491a7.jpg https://te.legra.ph/file/142cfa1f05626acf24241.jpg",
+            "description": "https://te.legra.ph/file/142cfa1f05626acf24241.jpg",
             "required": true
         },
         "LOG_CHANNEL": {
@@ -120,8 +120,7 @@
             "required": false
         },
         "WELCOM_PIC": {
-            "description": "https://telegra.ph/file/216c233c62bfeb241b359.jpg https://telegra.ph/file/f7a0e18e59b404d69ee3d.jpg https://telegra.ph/file/1a2b6e76af675065491a7.jpg https://te.legra.ph/file/142cfa1f05626acf24241.jpg",
-            "value": "",
+            "description": "https://te.legra.ph/file/142cfa1f05626acf24241.jpg",
             "required": true
         },
         "WELCOM_TEXT": {
