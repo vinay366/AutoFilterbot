@@ -39,7 +39,7 @@
             "required": false
         },
         "PICS": {
-            "description": "https://te.legra.ph/file/94bc067909902a02eaf20.jpg",
+            "description": "https://telegra.ph/file/216c233c62bfeb241b359.jpg https://telegra.ph/file/f7a0e18e59b404d69ee3d.jpg https://telegra.ph/file/1a2b6e76af675065491a7.jpg https://te.legra.ph/file/142cfa1f05626acf24241.jpg",
             "required": true
         },
         "LOG_CHANNEL": {
@@ -57,7 +57,7 @@
         },
         "CUSTOM_FILE_CAPTION": {
             "description": "A custom file caption for your files. formatable with , file_name, file_caption, file_size, Read Readme.md for better understanding.",
-            "value": "Hey {mention}👋\n\n{file_name}\n\n🔘 size - {file_size}\n\n╭─── • ❰ @MR_LINK_Z ❱ • ────➤\n┣ ▫️ @MRxSERIES\n┣ ▫️ @MalluMovie_Official\n╰─────── • ◆ • ───────➤",
+            "value": "File Namke : {file_name}  🔘 size - {file_size} • ❰ @DevilServers ❱ •",
             "required": false
         },
         "DATABASE_URL": {
@@ -76,7 +76,7 @@
         },
         "SUPPORT_CHAT": {
             "description": "Updated Channel Username Without @ Not Chanel ID",
-            "value": "MKN_BOTZ_DISCUSSION_GROUP",
+            "value": "DevilServers",
             "required": false
         },
         "IMDB": {
@@ -120,7 +120,7 @@
             "required": false
         },
         "WELCOM_PIC": {
-            "description": "https://te.legra.ph/file/94bc067909902a02eaf20.jpg",
+            "description": "https://telegra.ph/file/216c233c62bfeb241b359.jpg https://telegra.ph/file/f7a0e18e59b404d69ee3d.jpg https://telegra.ph/file/1a2b6e76af675065491a7.jpg https://te.legra.ph/file/142cfa1f05626acf24241.jpg",
             "value": "",
             "required": true
         },
