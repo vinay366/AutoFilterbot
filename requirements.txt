@@ -1,35 +1,35 @@
-# --Main---- #
-pyrofork
-tgcrypto
-aiofiles
-aiohttp
-requests
-bs4
+#--Main----#
+pyrofork==2.3.45
+tgcrypto==1.2.5
+aiofiles==22.1.0     
+aiohttp==3.10.11
+requests==2.30.0
+bs4==0.0.1
 
-# ---database--- #
+#---database---#
 pymongo
 dnspython
 marshmallow
 umongo
 motor
 
-# ---ytdl---- #
+#---ytdl----#
 youtube-search-python
 youtube-search
-yt-dlp
+yt-dlp==2023.2.17
 
-# ---imdb--- #
+#---imdb---#
 cinemagoer==2023.5.1
 
-# ---others---- #
-opencv-python-headless
-googletrans
-telegraph
-python-dotenv
-gTTS
-Pillow
-psutil
-NumPy
+#---others----#
+opencv-python-headless==4.7.0.68
+googletrans==3.1.0a0
+telegraph==2.2.0
+python-dotenv==0.21.1
+gTTS==2.3.1
+Pillow==10.2.0
+psutil==5.9.4
+NumPy==1.26.2
 wheel
 ujson
 wget
