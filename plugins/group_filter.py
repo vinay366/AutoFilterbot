@@ -182,9 +182,13 @@ async def auto_filter(client, msg, spoll=False):
     if not spoll:
         message = msg
         settings = await get_settings(message.chat.id)
-        if message.text.startswith("/"): return  # ignore commands
+
+        if message.text.startswith("/"):
+            return  # Ignore commands
+
         if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
             return
+
         if 2 < len(message.text) < 100:
             search = message.text
             files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
@@ -197,30 +201,22 @@ async def auto_filter(client, msg, spoll=False):
             return
     else:
         settings = await get_settings(msg.message.chat.id)
-        message = msg.message.reply_to_message  # msg will be callback query
+        message = msg.message.reply_to_message
         search, files, offset, total_results = spoll
 
     pre = 'filep' if settings['file_secure'] else 'file'
     req = message.from_user.id if message.from_user else 0
 
-    # 🛠 Shortlink or Direct Button
-    if SHORT_URL and SHORT_API:
-        if settings["button"]:
-            btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}] {file.file_name}", url=await get_shortlink(f"https://telegram.dog/{temp.U_NAME}?start=pre_{file.file_id}"))] for file in files]
-        else:
-            btn = [[InlineKeyboardButton(text=f"{file.file_name}", url=await get_shortlink(f"https://telegram.dog/{temp.U_NAME}?start=pre_{file.file_id}")),
-                    InlineKeyboardButton(text=f"{get_size(file.file_size)}", url=await get_shortlink(f"https://telegram.dog/{temp.U_NAME}?start=pre_{file.file_id}"))] for file in files]
+    if settings["button"]:
+        btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{req}#{file.file_id}')] for file in files]
     else:
-        if settings["button"]:
-            btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{req}#{file.file_id}')] for file in files]
-        else:
-            btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'{pre}#{req}#{file.file_id}'),
-                    InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'{pre}#{req}#{file.file_id}')] for file in files]
+        btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'{pre}#{req}#{file.file_id}'),
+                InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'{pre}#{req}#{file.file_id}')] for file in files]
 
     btn.insert(0, [InlineKeyboardButton("🔗 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🔗", "howdl")])
+
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
-        temp.GP_BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
         btn.append(
             [InlineKeyboardButton(text=f"❄️ ᴩᴀɢᴇꜱ 1/{math.ceil(int(total_results) / 6)}", callback_data="pages"),
@@ -229,9 +225,10 @@ async def auto_filter(client, msg, spoll=False):
     else:
         btn.append([InlineKeyboardButton(text="❄️ ᴩᴀɢᴇꜱ 1/1", callback_data="pages")])
 
-    # 🛠 IMDb Data Fetching
+    # IMDb Data Fetching
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
+
     if imdb:
         cap = TEMPLATE.format(
             group=message.chat.title,
@@ -269,15 +266,34 @@ async def auto_filter(client, msg, spoll=False):
     else:
         cap = f"Hᴇʀᴇ Is Wʜᴀᴛ I Fᴏᴜɴᴅ Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}"
 
-    # 🛠 Handling Message Deletion Safely
+    # Handling Message Sending
     try:
         if imdb and imdb.get('poster'):
-            hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(IMDB_DELET_TIME)
+            poster_url = imdb.get('poster')
+
+            # Validate IMDb poster URL
+            if not poster_url.startswith("http"):
+                poster_url = None  # Invalid URL
+
+            try:
+                if poster_url:
+                    hehe = await message.reply_photo(photo=poster_url, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+                else:
+                    raise Exception("Invalid poster URL")
+            except (pyrogram.errors.WebpageMediaEmpty, pyrogram.errors.WebpageCurlFailed, Exception):
+                fallback_image = "https://example.com/default.jpg"  # Replace with a working fallback image
+                try:
+                    hehe = await message.reply_photo(photo=fallback_image, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+                except Exception as e:
+                    logger.exception(e)
+                    hehe = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+
+            await asyncio.sleep(30)  # Use your IMDB_DELET_TIME
             await hehe.delete()
+
         else:
             crl = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(IMDB_DELET_TIME)
+            await asyncio.sleep(30)  # Use your IMDB_DELET_TIME
             await crl.delete()
 
         if message.from_user and message.from_user.is_self:
