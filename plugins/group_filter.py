@@ -271,7 +271,6 @@ async def auto_filter(client, msg, spoll=False):
         if imdb and imdb.get('poster'):
             poster_url = imdb.get('poster')
 
-            # Validate IMDb poster URL
             if not poster_url.startswith("http"):
                 poster_url = None  # Invalid URL
 
@@ -281,7 +280,7 @@ async def auto_filter(client, msg, spoll=False):
                 else:
                     raise Exception("Invalid poster URL")
             except (pyrogram.errors.WebpageMediaEmpty, pyrogram.errors.WebpageCurlFailed, Exception):
-                fallback_image = "https://example.com/default.jpg"  # Replace with a working fallback image
+                fallback_image = "https://telegra.ph/file/216c233c62bfeb241b359.jpg"
                 try:
                     hehe = await message.reply_photo(photo=fallback_image, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
                 except Exception as e:
