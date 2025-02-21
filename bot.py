@@ -66,8 +66,6 @@ class Bot(Client):
             await site.start()
             logger.info("Web Response Is Running......🕸️")
 
-        self.loop.create_task(self.keep_alive())
-
     async def iter_messages(self, chat_id: Union[int, str], limit: int, offset: int = 0) -> Optional[AsyncGenerator["types.Message", None]]:                       
         current = offset
         while True:
