@@ -68,17 +68,6 @@ class Bot(Client):
 
         self.loop.create_task(self.keep_alive())
 
-    async def stop(self, *args):
-        if self.web_runner:
-            await self.web_runner.cleanup()
-        await super().stop()
-        logger.info(f"Bot Is Restarting ⟳...")
-
-    async def keep_alive(self):
-        while True:
-            await asyncio.sleep(600)
-            logger.info("Keeping bot alive...")
-
     async def iter_messages(self, chat_id: Union[int, str], limit: int, offset: int = 0) -> Optional[AsyncGenerator["types.Message", None]]:                       
         current = offset
         while True:
