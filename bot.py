@@ -58,7 +58,7 @@ class Bot(Client):
             app = web.Application(client_max_size=30000000)
             
             async def home(request):
-                return web.Response(text="DevilServers Wow", content_type="text/plain")
+                return web.Response(text="TCU_TCU Wow", content_type="text/plain")
             
             app.router.add_get("/", home)  # Route added
             
