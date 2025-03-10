@@ -57,7 +57,7 @@
         },
         "CUSTOM_FILE_CAPTION": {
             "description": "A custom file caption for your files. formatable with , file_name, file_caption, file_size, Read Readme.md for better understanding.",
-            "value": "File Namke : {file_name}  🔘 size - {file_size} • ❰ @DevilServers ❱ •",
+            "value": "File Namke : {file_name}  🔘 size - {file_size} • ❰ @TCU_TCU ❱ •",
             "required": false
         },
         "DATABASE_URL": {
@@ -92,12 +92,12 @@
         "IMDB_TEMPLATE": {
             "description": "Custom IMDB Template",
             "value": "<b>Qᴜᴇʀʏ: {query}</b>\n\n🏷 Tɪᴛʟᴇ: <a href={url}>{title}</a>\n🎭 Gᴇɴʀᴇꜱ: {genres}\n📆 Yᴇᴀʀ: <a href={url}/releaseinfo>{year}</a>\n🌟 Rᴀᴛɪɴɢ: <a href={url}/ratings>{rating}</a>/10",        
-            "required": true
+            "required": false
         }, 
         "IMDB_DELET_TIME": {
             "description": "bot risult aouto delet time in second do to avoid group copyright issue. default is 300 ",
             "value": "300",
-            "required": true  
+            "required": false  
         },
         "SINGLE_BUTTON": {
             "description": "choose b/w single or double buttons https://github.com/Aadhi000/Ajax/issues/22",
@@ -136,7 +136,7 @@
         "PMFILTER": {
             "description": "PM AutoFilter. set True to on / False to off",
             "value": "True",
-            "required": false
+            "required": true
         },
         "G_FILTER": {
             "description": "GlobalFilter set True to on / False to off",
