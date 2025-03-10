@@ -36,13 +36,13 @@ async def start(client, message):
             InlineKeyboardButton("➕️ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀᴛ ➕", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
             ],[
             InlineKeyboardButton("Sᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat=''), 
-            InlineKeyboardButton("Cʜᴀɴɴᴇʟ 🔈", url="https://t.me/DevilServers")
+            InlineKeyboardButton("Cʜᴀɴɴᴇʟ 🔈", url="https://t.me/TCU_TCU")
             ],[      
             InlineKeyboardButton("Hᴇʟᴩ 🕸️", callback_data="help"),
             InlineKeyboardButton("Aʙᴏᴜᴛ ✨", callback_data="about")
         ]]
-        m = await message.reply_sticker("CAACAgUAAxkBAAKNF2U2MbK_THYYrlt_a_r8EXR6DgYGAAJwDAACDfOwVX3aQvn6mn0DMAQ") 
-        await asyncio.sleep(2)
+        m = await message.reply_sticker("CAACAgIAAxkBAAEOBzZnzuVD9tp_kO6a09N6Ert4J6nPDwACuSoAAiKoqEpgnGXQL2uR6jYE") 
+        await asyncio.sleep(5)
         await message.reply_photo(photo=random.choice(PICS), caption=START_MESSAGE.format(user=message.from_user.mention, bot=client.mention), reply_markup=InlineKeyboardMarkup(buttons), parse_mode=enums.ParseMode.HTML)
         return await m.delete()
         
@@ -72,13 +72,13 @@ async def start(client, message):
             InlineKeyboardButton("➕️ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀᴛ ➕", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
             ],[
             InlineKeyboardButton("Sᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat=''), 
-            InlineKeyboardButton("Cʜᴀɴɴᴇʟ 🔈", url="https://t.me/DevilServers")
+            InlineKeyboardButton("Cʜᴀɴɴᴇʟ 🔈", url="https://t.me/TCU_TCU")
             ],[      
             InlineKeyboardButton("Hᴇʟᴩ 🕸️", callback_data="help"),
             InlineKeyboardButton("Aʙᴏᴜᴛ ✨", callback_data="about")
         ]]
-        m = await message.reply_sticker("CAACAgUAAxkBAAKNF2U2MbK_THYYrlt_a_r8EXR6DgYGAAJwDAACDfOwVX3aQvn6mn0DMAQ")
-        await asyncio.sleep(2)
+        m = await message.reply_sticker("CAACAgIAAxkBAAEOBzZnzuVD9tp_kO6a09N6Ert4J6nPDwACuSoAAiKoqEpgnGXQL2uR6jYE")
+        await asyncio.sleep(5)
         await message.reply_photo(photo=random.choice(PICS), caption=START_MESSAGE.format(user=message.from_user.mention, bot=client.mention), reply_markup=InlineKeyboardMarkup(buttons), parse_mode=enums.ParseMode.HTML)
         return await m.delete()
         
